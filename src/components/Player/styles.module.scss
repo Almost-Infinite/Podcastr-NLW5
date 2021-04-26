@@ -1,0 +1,259 @@
+@use './src/styles/vars' as *;
+@use './src/styles/mixin' as *;
+
+.playerContainer {
+    .effectContainer {
+        filter: url(#goo);
+        width: 26.5rem;
+        height: 94.75%;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        .particle {
+            width: 100px;
+            height: 100px;
+            top: -20%;
+            background: linear-gradient(to bottom, $green-500 , rgba(0, 0, 0, 0.3), $purple-500);
+            position: absolute;
+            border-radius: 50%;
+            animation: fall2 20s infinite;
+    
+            @keyframes fall2 {
+                0% {
+                    top: -20%;
+                }
+                20% {
+                    top: 0%;
+                }
+                80% {
+                    top: 85%;
+                }
+                100% {
+                    top: 100%;
+                }
+            }
+            &:nth-of-type(2n) {
+                width: 60px;
+                height: 60px;
+            }
+            &:nth-of-type(3n) {
+                width: 60px;
+                height: 60px;
+            }
+            &:nth-of-type(1) {
+                left: 30%;
+                animation-delay: 1s;
+            }
+            &:nth-of-type(2) {
+                left: 60%;
+                animation-delay: 2s;
+            }
+            &:nth-of-type(3) {
+                left: 25%;
+                animation-delay: 3s;
+            }
+            &:nth-of-type(4) {
+                left: 75%;
+                animation-delay: 4s;
+            }
+            &:nth-of-type(5) {
+                left: 35%;
+                animation-delay: 5s;
+            }
+            &:nth-of-type(6) {
+                left: 50%;
+                animation-delay: 6s;
+            }
+            &:nth-of-type(7) {
+                left: 65%;
+                animation-delay: 7s;
+            }
+            &:nth-of-type(8) {
+                left: 35%;
+                animation-delay: 8s;
+            }
+            &:nth-of-type(9) {
+                left: 55%;
+                animation-delay: 9s;
+            }
+            &:nth-of-type(10) {
+                left: 55%;
+                animation-delay: 10s;
+            }
+            &:nth-of-type(11) {
+                left: 35%;
+                animation-delay: 11s;
+            }
+            &:nth-of-type(12) {
+                left: 50%;
+                animation-delay: 12s;
+            }
+            &:nth-of-type(13) {
+                left: 65%;
+                animation-delay: 12s;
+            }
+            &:nth-of-type(14) {
+                left: 40%;
+                animation-delay: 14s;
+            }
+            &:nth-of-type(15) {
+                left: 60%;
+                animation-delay: 15s;
+            }
+        }
+        .border {
+            position: absolute;
+            background: black;
+            width: 26.5rem;
+            height: 10%;
+            z-index: 1;
+    
+            &:nth-last-of-type(1) {
+                top: -2rem;
+                left: 0;
+                background: linear-gradient(to bottom, transparent,$green-500,transparent);
+              
+            }
+            &:nth-last-of-type(2) {
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(to bottom, transparent 20%, $purple-500);
+            }
+        }
+    }
+    padding: 3rem 4rem;
+    width: 26.5rem;
+    height: 100vh;
+    animation: fall 10s linear infinite alternate; 
+    @include backgroundAnimation(fall);
+
+    color: $white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    header {
+        margin-top: -3rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        z-index: 2;
+    }
+    strong {
+        font-family: Lexend, sans-serif;
+        font-weight: 600;
+        z-index: 2;
+    }
+    footer {
+        align-self: stretch;
+        z-index: 2;
+        &.empty .progress{
+            opacity: 0.5;
+        }
+    }
+}
+.currentEpisode {
+    text-align: center;
+    z-index: 2;
+
+    img {
+        border-radius: 1.5rem;
+        z-index: 2;
+    }
+
+    strong {
+        display: block;
+        margin-top: 2rem;
+        font: 600 1.25rem Lexend, sans-serif;
+        line-height: 1.75rem;
+        z-index: 2;
+    }
+    span {
+        display: block;
+        margin-top: 1rem;
+        opacity: 0.6;
+        line-height: 1.5rem;
+        z-index: 2;
+    }
+}
+.emptyPlayer {
+    width: 100%;
+    height: 20rem;
+    border: 1.5px dashed $purple-300;
+    border-radius: 1.5rem;
+    background: linear-gradient(143.8deg, rgba(145, 100, 250, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+    padding: 4rem;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    z-index: 2;
+
+    span {
+        display: inline-block;
+        width: 4rem;
+        text-align: center;
+        z-index: 2;
+    }
+    .slider {
+        flex: 1;
+        z-index: 2;
+        .emptySlider {
+            width: 100%;
+            height: 4px;
+            background: $purple-300;
+            border-radius: 2px;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+    gap: 1.5rem;
+    z-index: 2;
+
+    button {
+        background: transparent;
+        border: 0;
+        font-size: 0;
+        transition: filter 0.4s;
+
+        &:disabled {
+            cursor: default;
+            opacity: 0.5;
+        }
+        &:hover:not(:disabled) {
+            filter: brightness(0.7);
+        }
+        &.isActive {
+            filter: invert(0.35) sepia(1) saturate(3) hue-rotate(20deg);
+        }
+        &.isActive:hover {
+            filter: brightness(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(20deg);
+        }
+
+        &.playButton {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 1rem;
+            background: $purple-400;
+            &:hover {
+                filter: brightness(0.9);
+            }
+        }
+    }
+}

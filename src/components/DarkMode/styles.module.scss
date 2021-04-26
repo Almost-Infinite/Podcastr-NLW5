@@ -1,0 +1,64 @@
+@use './src/styles/mixin' as *;
+
+.darkMode {
+    width: 5rem;
+    height: 5rem;
+    margin-left: auto;
+    cursor: pointer;
+
+    #sol {
+        width: 4rem;
+        height: 4rem;
+        transition: 0.5s linear;
+        transform: translate(-20px, 0);
+        opacity: 0;
+        transform-origin: center;
+        animation: animaSol 1.5s linear forwards;
+       
+       
+    }
+    #lua {
+        transition: 0.5s linear;
+        transform: translate(-20px, 0);
+        opacity: 0;
+        transform-origin: center;
+        animation: animaLua 1.5s linear forwards;
+        
+        
+    }
+    
+    @keyframes animaSol {
+        0% {
+            transform: translate(-20px, 0) rotate(0deg);
+            opacity: 0;
+        }
+        100% {
+            transform: translate(0px, 0px) rotate(180deg);
+            opacity: 1;
+        }
+    }
+    @keyframes animaLua {
+        0% {
+            transform: translate(-20px, 0);
+            opacity: 0;
+        }
+        100% {
+            transform: translate(0px, 0px) ;
+            opacity: 1;
+        }
+    }
+
+
+
+    .hidden {
+        display: none;
+    }
+    button {
+        width: 5rem;
+        height: 5rem;
+        background: transparent;
+        border: 0;
+        font-size: 0;
+        transition: filter 0.4s;
+    }
+}

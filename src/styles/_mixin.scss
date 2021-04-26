@@ -1,0 +1,38 @@
+@use './src/styles/vars' as *;
+
+@mixin backgroundAnimation($name) {
+      @keyframes #{$name} {   
+
+        0% {
+            background: linear-gradient(to bottom, $purple-500 1%, $green-500);
+        }
+        @for $i from 1 through 100 {
+            $p: #{$i+"%"};
+           
+            #{$p} {
+                background: linear-gradient(to bottom, $purple-500 $p, $green-500 );
+               
+            };
+           
+        }
+        
+    }
+
+}
+
+@mixin escuro() {
+    body {
+        background-color: black ;
+        p,span {
+            color: rgb(241, 241, 241) ;
+        }
+    }
+}
+@mixin claro() {
+    body {
+        background-color: rgb(255, 255, 255);
+        p,span {
+            color: rgb(0, 0, 0) ;
+        }
+    }
+}

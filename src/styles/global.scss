@@ -1,0 +1,65 @@
+@use "vars" as *;
+@use "media" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    //background-color: $gray-50;
+}
+
+body,
+input,
+textarea,
+button {
+    font: 500 1rem Inter, sans-serif;
+    //color: $gray-500;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    font-family: Lexend, sans-serif;
+    //color: $gray-800;
+}
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+button {
+    cursor: pointer;
+}
+
+[data-theme="dark"] {
+   
+    body {
+        transition: 1s linear;
+        color: #fff;
+        background: rgb(19, 0, 17);
+        #logo {
+            filter: invert(0.5);
+        }
+
+        a {
+            color: $purple-300;
+        }
+    }
+}
+[data-theme="light"] {
+    body {
+        transition: 1s linear;       
+        background: $white; 
+    }
+  
+    a {
+        color: $purple-800;
+    }
+}
