@@ -1,13 +1,12 @@
 <img src="https://i.imgur.com/o5FcDqN.png"  alt="Almost Infinite" align="center" height="600" width="600" >
 
-## Scroll Below 👇
+
 
 <br><br>
 # Next Level Week 5
+## Video 👇
+[![PodCastr](https://img.youtube.com/vi/c07jSfy71ZU/0.jpg)](https://www.youtube.com/watch?v=c07jSfy71ZU&ab_channel=Lu%C3%A3Muzy-BR)
 
- <video  controls allowfullscreen="false" autoplay width="100%">
-    <source src="./public/projetoNLW.mp4" type="video/mp4">    
-  </video>
 <br>
 <br>
 
