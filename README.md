@@ -1,17 +1,23 @@
 <img src="https://i.imgur.com/o5FcDqN.png"  alt="Almost Infinite" align="center" height="600" width="600" >
 
-## Scroll Below 👇
+
 
 <br><br>
 # Next Level Week 5
+## Video 👇
+[![PodCastr](./public/capa2.jpg)](https://www.youtube.com/watch?v=c07jSfy71ZU&ab_channel=Lu%C3%A3Muzy-BR)
 
- <video  controls allowfullscreen="false" autoplay width="100%">
-    <source src="./public/projetoNLW.mp4" type="video/mp4">    
-  </video>
 <br>
 <br>
 
 <p align="left" > <img src="https://komarev.com/ghpvc/?username=almost-infinite" alt="almost-infinite" style="border-radius: 30px;" /> </p>
+
+
+# O NLW é um evento online com muito código, desafios, networking e um único objetivo: te levar para o próximo nível.
+
+Sempre com um conteúdo novo a cada edição, você vai descobrir na prática uma metodologia eficiente para o seu aprendizado, além de conceitos, ferramentas e hacks que vão impulsionar sua carreira.
+
+Uma semana intensiva, desenhada para te ajudar a dar o próximo passo na sua evolução como programadora ou programador.
 
 <br><br>
 <h3 align="left">Languages and Tools:</h3>
