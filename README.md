@@ -5,7 +5,7 @@
 <br><br>
 # Next Level Week 5
 ## Video 👇
-[![PodCastr](https://img.youtube.com/vi/c07jSfy71ZU/0.jpg)](https://www.youtube.com/watch?v=c07jSfy71ZU&ab_channel=Lu%C3%A3Muzy-BR)
+[![PodCastr](./public/capa2.jpg)](https://www.youtube.com/watch?v=c07jSfy71ZU&ab_channel=Lu%C3%A3Muzy-BR)
 
 <br>
 <br>
